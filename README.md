@@ -9,11 +9,11 @@
 
 ## Steps to build the blog.
 * Setup the tools
-*  express
-*  babel
-*  webpack 2
-*  eslint
-*  editorconfig
+  * express
+  * babel
+  * webpack 2
+  * eslint
+  * editorconfig
 
 * Setup of the middleware and mongodb
   * add mongoose, body-parcer, morgan, compression, helmet
