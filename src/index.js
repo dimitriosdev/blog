@@ -10,8 +10,9 @@ const app = express();
 middlewaresConfig(app);
 
 app.get('/', (req, res) => {
-  res.send('Hello.');
+  res.send('Hello...');
 });
+
 
 apiRoutes(app);
 

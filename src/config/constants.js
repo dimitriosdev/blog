@@ -1,5 +1,5 @@
 const devConfig = {
-  MONGO_URL: 'mongodb://localhost/blog-dev',
+  MONGO_URL: 'mongodb://localhost/blog-prod',
 };
 
 const testConfig = {
@@ -7,7 +7,7 @@ const testConfig = {
 };
 
 const prodConfig = {
-  MONGO_URL: 'mongodb://localhost/blog-prod',
+  MONGO_URL: 'mongodb://dim-dev:Kanenas0001!@ds024748.mlab.com:24748/blog-prod',
 };
 
 const defaultConfig = {

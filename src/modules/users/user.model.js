@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import { hashSync } from 'bcrypt-nodejs';
 import validator from 'validator';
 
 import { passwordReg } from './user.validations';
@@ -45,5 +46,20 @@ const UserSchema = new Schema({
     },
   },
 });
+
+// eslint-disable-next-line func-names
+UserSchema.pre('save', function (next) {
+  if (this.isModified('password')) {
+    // eslint-disable-next-line no-underscore-dangle
+    this.password = this._hashPassword(this.password);
+  }
+  return next();
+});
+
+UserSchema.methods = {
+  _hashPassword(password) {
+    return hashSync(password);
+  },
+};
 
 export default mongoose.model('User', UserSchema);
